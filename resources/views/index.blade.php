@@ -21,7 +21,7 @@
     </style>
 </head>
 
-<body class="mx-[8%]">
+<body class="mx-[8%] text-[#2D2E2E]">
     {{-- Navbar --}}
     <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -132,14 +132,16 @@
         <ul>
             <li class="opacity-50">
                 <div class="grid grid-cols-10">
-                    <div class="col-span-2 p-4 my-auto"><img src="{{ asset('images/avatar1.png') }}" alt=""></div>
+                    <div class="col-span-2 p-4 my-auto -translate-x-3"><img src="{{ asset('images/avatar1.png') }}"
+                            alt=""></div>
                     <div class="col-span-7 bg-[#F6F6F6] w-full py-3 px-6 mt-12">
                         <p class="">It is a long established fact that a reader will be
                             distracted by the readable
                             content of a page when looking at its layout.</p>
                         <p class="font-bold">Lora Smith</p>
                     </div>
-                    <div class="col-span-1 p-4 relative"><img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}" alt=""></div>
+                    <div class="col-span-1 p-4 relative"><img class="absolute top-0 right-0"
+                            src="{{ asset('images/comment.svg') }}" alt=""></div>
                 </div>
 
             </li>
@@ -148,7 +150,84 @@
 
     {{-- Subscribe --}}
     <section id="subscribe" class="">
-        
+        <h1 class="font-bold text-5xl mb-3">Try using our templates!</h1>
+        <h3 class="text-md w-[80%]">
+            Let's embody your beautiful ideas together, simplify the way you visualize your next big things.
+        </h3>
+
+        <div class="relative mb-10">
+            <input class="w-full rounded-md bg-[#F6F6F6] h-[50px] p-2" placeholder="Email" type="email">
+            <button
+                class="absolute w-[30%] right-0 top-0 rounded-r-none rounded-tr-lg rounded-br-lg h-[50px] border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] p-2 transition duration-300 ">Subscribe</button>
+
+            <img class="w-full rounded-md my-5" src="{{ asset('images/main-image1.png') }}" alt="">
+        </div>
+    </section>
+    {{-- try us --}}
+    {{-- need fixes for the left indent --}}
+    <section id="try" class="w-[100vw] py-10 -translate-x-[80px] relative mx-0  bg-[#3A4F39] ">
+        <div class="mx-[8%]">
+            <h1 class="font-bold text-white text-5xl mb-3">Try using our templates!</h1>
+            <h3 class="text-md text-white w-[80%]">
+                Let's embody your beautiful ideas together, simplify the way you visualize your next big things.
+            </h3>
+
+            <div class="flex justify-end">
+                <a class="text-[#F8D254] underline mr-3" href="#">Learn More</a>
+                <img src="{{ asset('images/arrow.svg') }}" alt="arrow">
+            </div>
+        </div>
+
+    </section>
+
+    {{-- Unknown section --}}
+    <section id="unknown" class="mt-[30px]">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <h1 class="font-bold text-lg">I/№16</h1>
+            </div>
+            <div class="col-span-2">
+                <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
+                    visualize your next big things.</p>
+            </div>
+        </div>
+        <hr>
+
+        <img class="w-full h-12 object-cover mt-3" src="{{ asset('images/main-image1.png') }}" alt="">
+
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <h1 class="font-bold text-lg">I/№16</h1>
+            </div>
+            <div class="col-span-2">
+                <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
+                    visualize your next big things.</p>
+            </div>
+        </div>
+        <hr>
+        {{-- need fixes --}}
+        <img src="{{asset('images/avatars.png')}}" alt="" class="mx-0 w-[100vw] object-cover h-64">
+
+    </section>
+
+    {{-- Contact us section --}}
+    <section id="contact" class="mt-8">
+        <div class="flex flex-col  items-center justify-center">
+            <h3 class="font-bold text-lg mb-5">Contact us</h3>
+            <p class="mb-7">(334) 202-4792</p>
+            <p class="mb-7">haddawy@comcast.net</p>
+            <p class="mb-7">998 Devonshire Ave.Camp Hill, PA 17011</p>
+        </div>
+
+        <div class="bg-[#EFF6F3] p-8">
+            <h1 class="text-center font-bold text-md mt-5 mb-10">Socialize with social</h1>
+            <div class="flex items-start justify-center mb-5">
+                <img class="mx-3" src="{{asset('images/instagram.svg')}}" alt="">
+                <img class="mx-3" src="{{asset('images/facebook.svg')}}" alt="">
+                <img class="mx-3" src="{{asset('images/twitter.svg')}}" alt="">
+                <img class="mx-3" src="{{asset('images/be.svg')}}" alt="">
+            </div>
+        </div>
     </section>
 </body>
 

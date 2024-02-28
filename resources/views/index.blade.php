@@ -140,8 +140,11 @@
 
         </div>
 
-        <div class="p-8 mx-auto rounded-md shadow mb-40">
-            <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
+        <div class="p-8 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid mb-40">
+            <div class="flex justify-between items-start">
+                <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
+                <img class="h-7 w-7" src="{{asset('images/true.svg')}}" alt="">
+            </div>
 
             <span class="flex items-center mb-3 text-[1rem]"><span class="font-bold text-[2rem]">$99</span>/month</span>
 

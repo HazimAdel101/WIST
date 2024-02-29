@@ -10,6 +10,8 @@
     {{-- Inter font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
         rel="stylesheet">
@@ -223,13 +225,11 @@
 
             </div>
         </div>
-
-
     </section>
     {{-- Comments --}}
     <section id="comments" class="mb-20 mx-[2rem]">
-        <ul>
-            <div id="group1" class="">
+        {{-- <ul>
+            <div class="grid grid-cols-1 md:grid-cols-3">
                 <li class="opacity-30 mb-4">
                     <div class="flex items-end justify-end relative">
                         <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}" alt="comment">
@@ -244,16 +244,13 @@
                                 content of a page when looking at its layout.</p>
                             <p class="m-0 font-bold text-lg">Lora Smith</p>
                         </div>
-
                     </div>
-
                 </li>
 
                 <li class="mb-4">
                     <div class="flex items-end justify-end relative">
                         <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}" alt="comment">
                     </div>
-
                     <div class="grid grid-cols-10">
                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
                                 src="{{ asset('images/avatar2.png') }}" alt=""></div>
@@ -270,7 +267,6 @@
                     <div class="flex items-end justify-end relative">
                         <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}" alt="comment">
                     </div>
-
                     <div class="grid grid-cols-10">
                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
                                 src="{{ asset('images/avatar3.png') }}" alt=""></div>
@@ -282,85 +278,276 @@
                         </div>
                     </div>
                 </li>
-
             </div>
+        </ul> --}}
 
 
-        </ul>
+        <div class="relative">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <ul>
+                            <div class="grid grid-cols-1 md:grid-cols-3">
+                                <li class="opacity-30 mb-4">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
 
-        <div id="default-carousel" class="relative w-full" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    jjfds sakllkfdsalkads dslkfakadskjlsad
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar1.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="mb-4">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar2.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="mb-4">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar3.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul>
+                            <div class="grid grid-cols-1 md:grid-cols-3">
+                                <li class="opacity-30 mb-4">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar2.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="mb-4">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar1.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="mb-4 opacity-30">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar3.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul>
+                            <div class="grid grid-cols-1 md:grid-cols-3">
+                                <li class="opacity-30 mb-4">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar3.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="mb-4">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar2.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="mb-4 opacity-30">
+                                    <div class="flex items-end justify-end relative">
+                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                            alt="comment">
+                                    </div>
+                                    <div class="grid grid-cols-10">
+                                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
+                                                src="{{ asset('images/avatar1.png') }}" alt=""></div>
+                                        <div
+                                            class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
+                                            <p class="">It is a long established fact that a reader will be
+                                                distracted by the readable
+                                                content of a page when looking at its layout.</p>
+                                            <p class="m-0 font-bold text-lg">Lora Smith</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-2.svg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-3.svg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-4.svg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-5.svg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="...">
-                </div>
-            </div>
-            <!-- Slider indicators -->
-            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
-                    data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-                    data-carousel-slide-to="1"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                    data-carousel-slide-to="2"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
-                    data-carousel-slide-to="3"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
-                    data-carousel-slide-to="4"></button>
-            </div>
-            <!-- Slider controls -->
-            <button type="button"
-                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-prev>
-                <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 1 1 5l4 4" />
-                    </svg>
-                    <span class="sr-only">Previous</span>
-                </span>
-            </button>
-            <button type="button"
-                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-next>
-                <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 9 4-4-4-4" />
-                    </svg>
-                    <span class="sr-only">Next</span>
-                </span>
-            </button>
+            </div>   
+            <div class="pt-8 md:pt-12">
+            <div class="carousel-dots "></div>
         </div>
+        </div>
+
+        <style>
+            .carousel {
+                overflow: hidden;
+            }
+
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.3s ease;
+            }
+
+            .carousel-item {
+                flex: 0 0 100%;
+            }
+
+            .carousel-dots {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+            }
+
+            .carousel-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #333;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+
+            .carousel-dot.active {
+                background-color: #666;
+            }
+        </style>
+
+        <script>
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelector('.carousel-dots');
+
+            items.forEach((item, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                if (index === 0) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    setActiveItem(index);
+                });
+                dots.appendChild(dot);
+            });
+
+            let activeIndex = 0;
+
+            function setActiveItem(index) {
+                items.forEach(item => {
+                    item.style.transform = `translateX(-${index * 100}%)`;
+                });
+                const activeDot = document.querySelector('.carousel-dot.active');
+                activeDot.classList.remove('active');
+                dots.children[index].classList.add('active');
+                activeIndex = index;
+            }
+
+            function nextItem() {
+                activeIndex = (activeIndex + 1) % items.length;
+                setActiveItem(activeIndex);
+            }
+
+            function prevItem() {
+                activeIndex = (activeIndex - 1 + items.length) % items.length;
+                setActiveItem(activeIndex);
+            }
+
+            setInterval(nextItem, 3000); // Auto slide every 3 seconds
+        </script>
 
     </section>
 
@@ -381,25 +568,23 @@
                         <input class="w-full rounded-md bg-[#F6F6F6] h-[50px] ps-4 py-4" placeholder="Email"
                             type="email">
                         <button
-                            class="absolute w-[30%] right-0 top-0 rounded-r-none rounded-tr-lg rounded-br-lg h-[50px] border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] p-2 transition duration-300 ">Subscribe</button>
+                            class="absolute w-[40%] right-0 top-0 rounded-r-none rounded-tr-lg rounded-br-lg h-[50px] border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] p-2 transition duration-300 ">Subscribe</button>
                     </div>
                 </div>
 
             </div>
             <div class="">
-                <img class="w-full h-full rounded-md my-5 md:m-0" src="{{ asset('images/main-image1.png') }}"
+                <img class="w-full h-full rounded-md pb-5 md:m-0" src="{{ asset('images/main-image1.png') }}"
                     alt="">
             </div>
         </div>
-        </div>
-
     </section>
 
     {{-- try us --}}
     <section id="try" class="w-[100vw] py-10 m-0 bg-[#3A4F39] md:py-20">
         <div class="mx-[8%] md:mx-[3rem] md:flex md:justify-between">
             <div class="md:w-[30%]">
-                <h1 class="font-bold text-white text-5xl mb-3 md:mb-6">Try using our templates!</h1>
+                <h1 class="font-bold text-white text-4xl md:text-5xl mb-3 md:mb-6">Try using our templates!</h1>
                 <h3 class="text-md text-white w-[80%]">
                     Let's embody your beautiful ideas together, simplify the way you visualize your next big things.
                 </h3>
@@ -424,7 +609,6 @@
                 </div>
             </div>
             <hr>
-
             <img class="w-full object-cover mt-3" src="{{ asset('images/main-image1.png') }}" alt="">
 
             <div class="grid grid-cols-3 gap-4">
@@ -438,15 +622,15 @@
             </div>
             <hr>
         </div>
-        <img style="object-fit: none" src="{{ asset('images/avatars.png') }}" alt=""
-            class="mx-0 w-[100vw] object-fill  my-5">
+        <img style="object-fit:none" src="{{ asset('images/avatars.png') }}" alt=""
+            class="mx-0 w-[100vw]   my-5">
     </section>
 
     {{-- Contact us section --}}
     <section id="contact" class="w-[88%] md:w-full mx-auto my-8 md:m-0">
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="">
-                <div class="flex flex-col  items-center justify-center">
+            <div class="md:mt-[4rem]">
+                <div class="flex flex-col  items-center justify-center md:mb-0">
                     <h3 class="font-bold text-lg mb-5">Contact us</h3>
                     <p class="mb-7">(334) 202-4792</p>
                     <p class="mb-7">haddawy@comcast.net</p>
@@ -454,20 +638,16 @@
                 </div>
             </div>
 
-                <div class="bg-[#EFF6F3] p-8 md:px-10 py-28">
-                    <h1 class="text-center font-bold text-md mt-5 mb-10">Socialize with social</h1>
-                    <div class="flex items-start justify-center mb-5 md:mb-0">
-                        <img class="mx-3" src="{{ asset('images/instagram.svg') }}" alt="">
-                        <img class="mx-3" src="{{ asset('images/facebook.svg') }}" alt="">
-                        <img class="mx-3" src="{{ asset('images/twitter.svg') }}" alt="">
-                        <img class="mx-3" src="{{ asset('images/be.svg') }}" alt="">
-                    </div>
+            <div class="bg-[#EFF6F3] p-8 md:px-10 md:py-28">
+                <h1 class="text-center font-bold text-md mt-5 mb-10">Socialize with social</h1>
+                <div class="flex items-start justify-center mb-5 md:mb-0">
+                    <img class="mx-3" src="{{ asset('images/instagram.svg') }}" alt="">
+                    <img class="mx-3" src="{{ asset('images/facebook.svg') }}" alt="">
+                    <img class="mx-3" src="{{ asset('images/twitter.svg') }}" alt="">
+                    <img class="mx-3" src="{{ asset('images/be.svg') }}" alt="">
                 </div>
-
+            </div>
         </div>
-
-
-
     </section>
 </body>
 

@@ -28,6 +28,7 @@
 </head>
 
 <body class="text-[#2D2E2E] overflow-x-hidden">
+
     {{-- Navbar --}}
     <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -87,124 +88,148 @@
             });
         });
     </script>
-
-    <div class="w-[88%] mx-auto block mt-[4rem] mb-8">
-        <img class="w-full mx-auto" src="{{ asset('images/main-image.png') }}" alt="main image">
-    </div>
-    <div class="flex flex-col items-center justify-center">
-        <button
-            class="w-[80%] h-[70px] font-medium  rounded-md text-xl px-4 py-2 translate-x-1 border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] transition duration-300 transform hover:scale-105">Contact
-            us
-        </button>
-        <p class="w-[80%] text-justify mt-5 text-lg font-medium">It is a long established fact that a reader will be
-            distracted by the readable content of a
-            page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content here', making it look like readable
-            English.</p>
-    </div>
-
-    <div class="w-[88%] mx-auto block mt-6 mb-[134px]">
-        <img class="w-full mx-auto" src="{{ asset('images/main-image1.png') }}" alt="main image 2">
-    </div>
-    {{-- Pricing --}}
-    <section id="pricing" class="mx-[2rem]">
-
-        <div class="p-8 mx-auto rounded-md shadow mb-40">
-            <p class="mb-3 text-[1.5rem] font-bold uppercase">Free</p>
-
-            <span class="flex items-center mb-3 text-[1rem]"><span class="font-bold text-[2rem]">$0</span>/month</span>
-
-            <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
-            <ul>
-                <li class="mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
-                </li>
-                <li class="opacity-50 mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">Figma responsive
-                        components</h3>
-                </li>
-                <li class="opacity-50 mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
-                </li>
-                <li class="opacity-50 mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
-                </li>
-            </ul>
-            <button
-                class="w-full border text-lg border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] rounded-lg px-4 py-3 transition duration-300 transform hover:scale-105">Try
-                now</button>
-
+    {{-- Main --}}
+    <section id="main" class="">
+        <div class="grid grid-cols-1 md:grid-cols-4 md:h-[85vh]">
+            <div class="p-4 md:p-0">
+                <div class="mx-auto mt-[4rem] h-full md:m-0  md:my-0 md:pd-0 mb-8">
+                    <img class="w-full h-full mx-auto" src="{{ asset('images/main-image.png') }}" alt="main image">
+                </div>
+            </div>
+            <div class="col-span-2 py-20">
+                <div class="flex flex-col items-center justify-center md:justify-end md:pb-8 md:h-full">
+                    <button
+                        class="w-[80%] md:w-[30%] h-[70px] font-medium  rounded-md text-xl px-4 py-2 translate-x-1 border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] transition duration-300 transform hover:scale-105">Contact
+                        us
+                    </button>
+                    <p class="w-[80%] text-justify mt-5 text-lg font-medium">It is a long established fact that a reader
+                        will be
+                        distracted by the readable content of a
+                        page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                        normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable
+                        English.</p>
+                </div>
+            </div>
+            <div class="p-4 md:p-0 text-center">
+                <div class="w-[88%] mx-auto block mt-6 mb-[134px] md:m-0">
+                    <img class="w-full mx-auto" src="{{ asset('images/main-image1.png') }}" alt="main image 2">
+                </div>
+            </div>
         </div>
 
-        <div class="p-8 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid mb-40">
-            <div class="flex justify-between items-start">
-                <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
-                <img class="h-7 w-7" src="{{asset('images/true.svg')}}" alt="">
+
+
+
+
+    </section>
+
+    {{-- Pricing --}}
+    <section id="pricing" class="mx-[2rem] md:mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:h-[85vh]">
+
+            <div class="p-8 mx-auto rounded-md shadow mb-40">
+                <p class="mb-3 text-[1.5rem] font-bold uppercase">Free</p>
+
+                <span class="flex items-center mb-3 text-[1rem]"><span
+                        class="font-bold text-[2rem]">$0</span>/month</span>
+
+                <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
+                <ul>
+                    <li class="mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
+                    </li>
+                    <li class="opacity-50 mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">Figma responsive
+                            components</h3>
+                    </li>
+                    <li class="opacity-50 mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
+                    </li>
+                    <li class="opacity-50 mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
+                    </li>
+                </ul>
+                <button
+                    class="w-full border text-lg border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] rounded-lg px-4 py-3 transition duration-300 transform hover:scale-105">Try
+                    now</button>
+
             </div>
 
-            <span class="flex items-center mb-3 text-[1rem]"><span class="font-bold text-[2rem]">$99</span>/month</span>
+            <div class="p-8 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid mb-40">
+                <div class="flex justify-between items-start">
+                    <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
+                    <img class="h-7 w-7" src="{{ asset('images/true.svg') }}" alt="">
+                </div>
 
-            <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
-            <ul>
-                <li class="mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
-                </li>
-                <li class="mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">Figma responsive
-                        components</h3>
-                </li>
-                <li class="opacity-50 mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="false">
-                    <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
-                </li>
-                <li class="opacity-50 mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="false">
-                    <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
-                </li>
-            </ul>
-            <button
-                class="w-full border text-lg border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] rounded-lg px-4 py-3 transition duration-300 transform hover:scale-105">Try
-                now</button>
+                <span class="flex items-center mb-3 text-[1rem]"><span
+                        class="font-bold text-[2rem]">$99</span>/month</span>
 
+                <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
+                <ul>
+                    <li class="mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
+                    </li>
+                    <li class="mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">Figma responsive
+                            components</h3>
+                    </li>
+                    <li class="opacity-50 mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="false">
+                        <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
+                    </li>
+                    <li class="opacity-50 mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="false">
+                        <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
+                    </li>
+                </ul>
+                <button
+                    class="w-full border text-lg border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] rounded-lg px-4 py-3 transition duration-300 transform hover:scale-105">Try
+                    now</button>
+
+            </div>
+
+            <div class="p-8 mx-auto rounded-md shadow mb-40">
+                <p class="mb-3 text-[1.5rem] font-bold uppercase">Pro</p>
+
+                <span class="flex items-center mb-3 text-[1rem]"><span
+                        class="font-bold text-[2rem]">$199</span>/month</span>
+
+                <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
+                <ul>
+                    <li class="mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
+                    </li>
+                    <li class="mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">Figma responsive
+                            components</h3>
+                    </li>
+                    <li class=" mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
+                    </li>
+                    <li class="mb-5">
+                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
+                    </li>
+                </ul>
+                <button
+                    class="w-full border text-lg border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] rounded-lg px-4 py-3 transition duration-300 transform hover:scale-105">Try
+                    now</button>
+
+            </div>
         </div>
 
-        <div class="p-8 mx-auto rounded-md shadow mb-40">
-            <p class="mb-3 text-[1.5rem] font-bold uppercase">Pro</p>
 
-            <span class="flex items-center mb-3 text-[1rem]"><span
-                    class="font-bold text-[2rem]">$199</span>/month</span>
-
-            <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
-            <ul>
-                <li class="mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
-                </li>
-                <li class="mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">Figma responsive
-                        components</h3>
-                </li>
-                <li class=" mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
-                </li>
-                <li class="mb-5">
-                    <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
-                    <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
-                </li>
-            </ul>
-            <button
-                class="w-full border text-lg border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] rounded-lg px-4 py-3 transition duration-300 transform hover:scale-105">Try
-                now</button>
-
-        </div>
     </section>
     {{-- Comments --}}
     <section id="comments" class="mb-20 mx-[2rem]">
@@ -267,8 +292,6 @@
 
 
         </ul>
-
-
 
         <div id="default-carousel" class="relative w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
@@ -401,7 +424,8 @@
             </div>
             <hr>
         </div>
-        <img style="object-fit: none" src="{{ asset('images/avatars.png') }}" alt="" class="mx-0 w-[100vw] object-fill h-96 my-5">
+        <img style="object-fit: none" src="{{ asset('images/avatars.png') }}" alt=""
+            class="mx-0 w-[100vw] object-fill h-96 my-5">
     </section>
 
     {{-- Contact us section --}}

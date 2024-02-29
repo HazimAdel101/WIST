@@ -128,10 +128,10 @@
     </section>
 
     {{-- Pricing --}}
-    <section id="pricing" class="mx-[2rem] md:mt-16">
+    <section id="pricing" class="mx-[2rem] mb-12 md:mt-16">
         <div class="grid grid-cols-1 md:grid-cols-3 md:mx-9">
 
-            <div class="p-8 mx-auto rounded-md shadow mb-40 md:me-[2rem]">
+            <div class="p-8 my-3  mx-auto rounded-md shadow md:mb-40 md:me-[2rem]">
                 <p class="mb-3 text-[1.5rem] font-bold uppercase">Free</p>
 
                 <span class="flex items-center mb-3 text-[1rem]"><span
@@ -163,7 +163,7 @@
 
             </div>
 
-            <div class="p-8 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid mb-40  md:me-[2rem]">
+            <div class="p-8 my-3 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid md:mb-40  md:me-[2rem]">
                 <div class="flex justify-between items-start">
                     <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
                     <img class="h-7 w-7" src="{{ asset('images/true.svg') }}" alt="">
@@ -198,7 +198,7 @@
 
             </div>
 
-            <div class="p-8 mx-auto rounded-md shadow mb-40  md:me-[2rem]">
+            <div class="p-8 my-3 mx-auto rounded-md shadow md:mb-40  md:me-[2rem]">
                 <p class="mb-3 text-[1.5rem] font-bold uppercase">Pro</p>
 
                 <span class="flex items-center mb-3 text-[1rem]"><span
@@ -231,6 +231,7 @@
             </div>
         </div>
     </section>
+
     {{-- Comments --}}
     <section id="comments" class="mb-20 mx-[2rem]">
         <div class="relative">
@@ -547,39 +548,43 @@
             </div>
         </div>
     </section>
+
     {{-- Unknown section --}}
     <section id="unknown" class="mt-[30px]">
         <div class="md:hidden">
             <div class="w-[88%] mx-auto">
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="col-span-1">
+                <div class="grid grid-cols-3">
+                    <div class="col-span-1 flex justify-end me-2">
                         <h1 class="font-bold text-lg">I/№16</h1>
                     </div>
                     <div class="col-span-2">
                         <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
                             visualize your next big things.</p>
                     </div>
-                </div>
-                <hr>
-                <img class="w-full object-cover h-[4rem] mt-3" src="{{ asset('images/main-image1.png') }}"
-                    alt="">
 
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="col-span-1">
+                    <div class="col-span-3">
+                        <hr>
+                    </div>
+
+                    <div class="col-span-3 my-4">
+                        <img class="w-full object-cover h-[4rem] mt-3" src="{{ asset('images/main-image1.png') }}"
+                            alt="">
+                    </div>
+                    <div class="col-span-1  flex justify-end me-2">
                         <h1 class="font-bold text-lg">I/№16</h1>
                     </div>
                     <div class="col-span-2">
                         <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
                             visualize your next big things.</p>
                     </div>
+                    <div class="col-span-3">
+                        <hr>
+                    </div>
                 </div>
-                <hr>
             </div>
         </div>
-
         <div class="hidden relative md:block w-[75%] mx-auto">
             <div class="mx-auto">
-
                 <div class="grid grid-cols-12 gap-4 py-5">
                     <div class="col-span-2 flex justify-center items-end">
                         <h1 class="font-bold text-lg">I/№16</h1>
@@ -610,8 +615,9 @@
                 </div>
             </div>
         </div>
-        <img style="object-fit:none" src="{{ asset('images/avatars.png') }}" alt=""
-            class="mx-0 md:bg-cover w-full h-max  my-5">
+
+        <img src="{{ asset('images/avatars.png') }}" alt=""
+            class="mx-0 h-[300px] md:h-full object-cover  md:bg-cover w-full my-5">
     </section>
 
     {{-- Contact us section --}}

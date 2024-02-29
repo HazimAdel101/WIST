@@ -118,18 +118,13 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
     </section>
 
     {{-- Pricing --}}
     <section id="pricing" class="mx-[2rem] md:mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:mx-9">
 
-            <div class="p-8 mx-auto rounded-md shadow mb-40">
+            <div class="p-8 mx-auto rounded-md shadow mb-40 md:me-[2rem]">
                 <p class="mb-3 text-[1.5rem] font-bold uppercase">Free</p>
 
                 <span class="flex items-center mb-3 text-[1rem]"><span
@@ -161,7 +156,7 @@
 
             </div>
 
-            <div class="p-8 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid mb-40">
+            <div class="p-8 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid mb-40  md:me-[2rem]">
                 <div class="flex justify-between items-start">
                     <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
                     <img class="h-7 w-7" src="{{ asset('images/true.svg') }}" alt="">
@@ -196,7 +191,7 @@
 
             </div>
 
-            <div class="p-8 mx-auto rounded-md shadow mb-40">
+            <div class="p-8 mx-auto rounded-md shadow mb-40  md:me-[2rem]">
                 <p class="mb-3 text-[1.5rem] font-bold uppercase">Pro</p>
 
                 <span class="flex items-center mb-3 text-[1rem]"><span
@@ -383,7 +378,7 @@
                         </h3>
                     </div>
                     <div class="relative mb-10">
-                        <input class="w-full rounded-md bg-[#F6F6F6] h-[50px] py-4" placeholder="Email"
+                        <input class="w-full rounded-md bg-[#F6F6F6] h-[50px] ps-4 py-4" placeholder="Email"
                             type="email">
                         <button
                             class="absolute w-[30%] right-0 top-0 rounded-r-none rounded-tr-lg rounded-br-lg h-[50px] border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] p-2 transition duration-300 ">Subscribe</button>
@@ -430,7 +425,7 @@
             </div>
             <hr>
 
-            <img class="w-full h-12 object-cover mt-3" src="{{ asset('images/main-image1.png') }}" alt="">
+            <img class="w-full object-cover mt-3" src="{{ asset('images/main-image1.png') }}" alt="">
 
             <div class="grid grid-cols-3 gap-4">
                 <div class="col-span-1">
@@ -444,27 +439,35 @@
             <hr>
         </div>
         <img style="object-fit: none" src="{{ asset('images/avatars.png') }}" alt=""
-            class="mx-0 w-[100vw] object-fill h-96 my-5">
+            class="mx-0 w-[100vw] object-fill  my-5">
     </section>
 
     {{-- Contact us section --}}
-    <section id="contact" class="w-[88%] mx-auto my-8 ">
-        <div class="flex flex-col  items-center justify-center">
-            <h3 class="font-bold text-lg mb-5">Contact us</h3>
-            <p class="mb-7">(334) 202-4792</p>
-            <p class="mb-7">haddawy@comcast.net</p>
-            <p class="mb-7">998 Devonshire Ave.Camp Hill, PA 17011</p>
+    <section id="contact" class="w-[88%] md:w-full mx-auto my-8 md:m-0">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="">
+                <div class="flex flex-col  items-center justify-center">
+                    <h3 class="font-bold text-lg mb-5">Contact us</h3>
+                    <p class="mb-7">(334) 202-4792</p>
+                    <p class="mb-7">haddawy@comcast.net</p>
+                    <p class="mb-7">998 Devonshire Ave.Camp Hill, PA 17011</p>
+                </div>
+            </div>
+
+                <div class="bg-[#EFF6F3] p-8 md:px-10 py-28">
+                    <h1 class="text-center font-bold text-md mt-5 mb-10">Socialize with social</h1>
+                    <div class="flex items-start justify-center mb-5 md:mb-0">
+                        <img class="mx-3" src="{{ asset('images/instagram.svg') }}" alt="">
+                        <img class="mx-3" src="{{ asset('images/facebook.svg') }}" alt="">
+                        <img class="mx-3" src="{{ asset('images/twitter.svg') }}" alt="">
+                        <img class="mx-3" src="{{ asset('images/be.svg') }}" alt="">
+                    </div>
+                </div>
+
         </div>
 
-        <div class="bg-[#EFF6F3] p-8">
-            <h1 class="text-center font-bold text-md mt-5 mb-10">Socialize with social</h1>
-            <div class="flex items-start justify-center mb-5">
-                <img class="mx-3" src="{{ asset('images/instagram.svg') }}" alt="">
-                <img class="mx-3" src="{{ asset('images/facebook.svg') }}" alt="">
-                <img class="mx-3" src="{{ asset('images/twitter.svg') }}" alt="">
-                <img class="mx-3" src="{{ asset('images/be.svg') }}" alt="">
-            </div>
-        </div>
+
+
     </section>
 </body>
 

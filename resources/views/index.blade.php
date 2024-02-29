@@ -30,8 +30,8 @@
 </head>
 
 <body class="text-[#2D2E2E] overflow-x-hidden">
-
-    <header class='border-b'>
+    {{-- Navbar --}}
+    <nav class='border-b'>
 
         <div class='flex flex-wrap items-center px-10 py-4 relative'>
             <a href='#' class='hidden max-lg:block'><img src="{{ asset('images/logo.svg') }}" alt="logo"
@@ -77,7 +77,7 @@
                 </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
     <script>
         var toggleBtn = document.getElementById('toggle');
@@ -93,69 +93,6 @@
 
         toggleBtn.addEventListener('click', handleClick);
     </script>
-
-
-    {{-- Navbar --}}
-    {{-- <nav class="bg-white border-gray-200">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="{{ asset('images/logo.svg') }}" alt="logo" class="h-8" />
-            </a>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-
-
-                <button data-collapse-toggle="navbar-cta" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                    aria-controls="navbar-cta" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-                <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
-                    <ul class="flex">
-                        <li class="">
-                            <img class="mr-3 inline-block" src="{{ asset('images/menu.svg') }}" alt="">
-                            <span>Menu</span>
-                        </li>
-
-                        <li class="">
-                            <a href="#"
-                                class="block py-2 px-3 md:p-0 text-black rounded md:bg-transparent md:text-[#3A4F39]"
-                                aria-current="page">English</a>
-                        </li>
-                    </ul>
-                    <li>
-                        <button
-                            class="rounded-md px-7 py-2 translate-x-1 border border-[#3A4F39] text-[#3A4F39] bg-white hover:bg-[#3A4F39] hover:text-white hover:border-white transition duration-300 transform hover:scale-105">Gavekort</button>
-                        <button
-                            class="  rounded-md  px-7 py-2 translate-x-1 border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] transition duration-300 transform hover:scale-105">Booking
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    {{-- collapse toggling script --}}
-    {{-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const button = document.querySelector('[data-collapse-toggle="navbar-cta"]');
-            const menu = document.querySelector('#navbar-cta');
-
-            button.addEventListener('click', function() {
-                const expanded = button.getAttribute('aria-expanded') === 'true' || false;
-                button.setAttribute('aria-expanded', !expanded);
-                menu.classList.toggle('hidden');
-            });
-        });
-    </script> --}}
-
 
     {{-- Main --}}
     <section id="main" class="">
@@ -611,33 +548,70 @@
         </div>
     </section>
     {{-- Unknown section --}}
-    <section id="unknown" class=" mx-auto mt-[30px]">
-        <div class="w-[88%]">
-            <div class="grid grid-cols-3 gap-4">
-                <div class="col-span-1">
-                    <h1 class="font-bold text-lg">I/№16</h1>
+    <section id="unknown" class="mt-[30px]">
+        <div class="md:hidden">
+            <div class="w-[88%] mx-auto">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="col-span-1">
+                        <h1 class="font-bold text-lg">I/№16</h1>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
+                            visualize your next big things.</p>
+                    </div>
                 </div>
-                <div class="col-span-2">
-                    <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
-                        visualize your next big things.</p>
-                </div>
-            </div>
-            <hr>
-            <img class="w-full object-cover mt-3" src="{{ asset('images/main-image1.png') }}" alt="">
+                <hr>
+                <img class="w-full object-cover h-[4rem] mt-3" src="{{ asset('images/main-image1.png') }}"
+                    alt="">
 
-            <div class="grid grid-cols-3 gap-4">
-                <div class="col-span-1">
-                    <h1 class="font-bold text-lg">I/№16</h1>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="col-span-1">
+                        <h1 class="font-bold text-lg">I/№16</h1>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
+                            visualize your next big things.</p>
+                    </div>
                 </div>
-                <div class="col-span-2">
-                    <p class="text-md">Let's embody your beautiful ideas together, simplify the way you
-                        visualize your next big things.</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="hidden relative md:block w-[75%] mx-auto">
+            <div class="mx-auto">
+
+                <div class="grid grid-cols-12 gap-4 py-5">
+                    <div class="col-span-2 flex justify-center items-end">
+                        <h1 class="font-bold text-lg">I/№16</h1>
+                    </div>
+                    <div class="row-span-2 col-span-5">
+                        <img class="w-full h-full object-cover " src="{{ asset('images/main-image1.png') }}"
+                            alt="">
+                    </div>
+                    <div class="col-span-5 flex justify-center items-end">
+                        <p class="text-sm">Let's embody your beautiful ideas together, simplify the way you
+                            visualize your next big things.</p>
+                    </div>
+
+                    <div class="absolute w-full top-[50%] col-span-3">
+                        <hr>
+                    </div>
+
+                    <div class="col-span-2">
+                        <h1 class="font-bold text-lg flex justify-center items-end">I/№16</h1>
+                    </div>
+                    <div class="col-span-5 flex justify-center items-start">
+                        <p class="text-sm">Let's embody your beautiful ideas together, simplify the way you
+                            visualize your next big things.</p>
+                    </div>
+                    <div class="absolute w-full top-[75%] col-span-3">
+                        <hr>
+                    </div>
                 </div>
             </div>
-            <hr>
         </div>
         <img style="object-fit:none" src="{{ asset('images/avatars.png') }}" alt=""
-            class="mx-0 w-[100vw]   my-5">
+            class="mx-0 md:bg-cover w-full h-max  my-5">
     </section>
 
     {{-- Contact us section --}}

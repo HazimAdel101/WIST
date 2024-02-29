@@ -31,17 +31,79 @@
 
 <body class="text-[#2D2E2E] overflow-x-hidden">
 
+    <header class='border-b'>
+
+        <div class='flex flex-wrap items-center px-10 py-4 relative'>
+            <a href='#' class='hidden max-lg:block'><img src="{{ asset('images/logo.svg') }}" alt="logo"
+                    class='w-18' /></a>
+            <div class='flex ml-auto lg:order-1 lg:hidden'>
+                <button id="toggle" class='ml-7'>
+                    <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="collapseMenu" class="lg:!flex lg:items-center w-full max-lg:hidden max-lg:py-4">
+                <ul class='lg:flex lg:space-x-8 max-lg:space-y-2'>
+                    <li class='max-lg:border-b max-lg:py-2'>
+                        <a href='#' class='hover:text-[#3A4F39] font-semiboldblock text-[15px]'>
+                            <img class="mr-2 inline-block w-5" src="{{ asset('images/menu.svg') }}" alt="">
+                            <span>Menu</span>
+                        </a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-2'><a href='#'
+                            class='hover:text-[#3A4F39]  block text-[15px]'>English</a></li>
+
+                </ul>
+                <a href='#' class='m-auto absolute lg:left-2/4 lg:-translate-x-1/2 max-lg:hidden'><img
+                        src="{{ asset('images/logo.svg') }}" alt="logo" class='w-16' /></a>
+                <ul class='lg:flex lg:space-x-2 max-lg:space-y-2 ml-auto'>
+                    <li class='max-lg:border-b max-lg:py-2'>
+                        <a href='#' class='hover:text-[#3A4F39] block text-[15px]'>
+                            <button
+                                class="rounded-md px-7 py-2 translate-x-1 border border-[#3A4F39] text-[#3A4F39] bg-white hover:bg-[#3A4F39] hover:text-white hover:border-white transition duration-300 transform hover:scale-105">Gavekort</button>
+
+                        </a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-2'>
+                        <a href='#' class='hover:text-[#3A4F39] block text-[15px]'>
+                            <button
+                                class="  rounded-md  px-7 py-2 translate-x-1 border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] transition duration-300 transform hover:scale-105">Booking
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var toggleBtn = document.getElementById('toggle');
+        var collapseMenu = document.getElementById('collapseMenu');
+
+        function handleClick() {
+            if (collapseMenu.style.display === 'block') {
+                collapseMenu.style.display = 'none';
+            } else {
+                collapseMenu.style.display = 'block';
+            }
+        }
+
+        toggleBtn.addEventListener('click', handleClick);
+    </script>
+
+
     {{-- Navbar --}}
-    <nav class="bg-white border-gray-200">
+    {{-- <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{ asset('images/logo.svg') }}" alt="logo" class="h-8" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Get
-                    started</button>
+
+
                 <button data-collapse-toggle="navbar-cta" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="navbar-cta" aria-expanded="false">
@@ -52,33 +114,36 @@
                             d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
+
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
                 <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+                    <ul class="flex">
+                        <li class="">
+                            <img class="mr-3 inline-block" src="{{ asset('images/menu.svg') }}" alt="">
+                            <span>Menu</span>
+                        </li>
+
+                        <li class="">
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 text-black rounded md:bg-transparent md:text-[#3A4F39]"
+                                aria-current="page">English</a>
+                        </li>
+                    </ul>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 md:p-0 text-black rounded md:bg-transparent md:text-blue-700"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 md:p-0 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">About</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 md:p-0 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Services</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 md:p-0 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Contact</a>
+                        <button
+                            class="rounded-md px-7 py-2 translate-x-1 border border-[#3A4F39] text-[#3A4F39] bg-white hover:bg-[#3A4F39] hover:text-white hover:border-white transition duration-300 transform hover:scale-105">Gavekort</button>
+                        <button
+                            class="  rounded-md  px-7 py-2 translate-x-1 border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] transition duration-300 transform hover:scale-105">Booking
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     {{-- collapse toggling script --}}
-    <script>
+    {{-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             const button = document.querySelector('[data-collapse-toggle="navbar-cta"]');
             const menu = document.querySelector('#navbar-cta');
@@ -89,7 +154,9 @@
                 menu.classList.toggle('hidden');
             });
         });
-    </script>
+    </script> --}}
+
+
     {{-- Main --}}
     <section id="main" class="">
         <div class="grid grid-cols-1 md:grid-cols-4 md:h-[85vh]">
@@ -104,7 +171,8 @@
                         class="w-[80%] md:w-[30%] h-[70px] font-medium  rounded-md text-xl px-4 py-2 translate-x-1 border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] transition duration-300 transform hover:scale-105">Contact
                         us
                     </button>
-                    <p class="w-[80%] text-justify mt-5 text-lg font-medium">It is a long established fact that a reader
+                    <p class="w-[80%] text-justify mt-5 text-lg font-medium">It is a long established fact that a
+                        reader
                         will be
                         distracted by the readable content of a
                         page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
@@ -228,60 +296,6 @@
     </section>
     {{-- Comments --}}
     <section id="comments" class="mb-20 mx-[2rem]">
-        {{-- <ul>
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                <li class="opacity-30 mb-4">
-                    <div class="flex items-end justify-end relative">
-                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}" alt="comment">
-                    </div>
-
-                    <div class="grid grid-cols-10">
-                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                src="{{ asset('images/avatar1.png') }}" alt=""></div>
-                        <div class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
-                            <p class="">It is a long established fact that a reader will be
-                                distracted by the readable
-                                content of a page when looking at its layout.</p>
-                            <p class="m-0 font-bold text-lg">Lora Smith</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="mb-4">
-                    <div class="flex items-end justify-end relative">
-                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}" alt="comment">
-                    </div>
-                    <div class="grid grid-cols-10">
-                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                src="{{ asset('images/avatar2.png') }}" alt=""></div>
-                        <div class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
-                            <p class="">It is a long established fact that a reader will be
-                                distracted by the readable
-                                content of a page when looking at its layout.</p>
-                            <p class="m-0 font-bold text-lg">Lora Smith</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="mb-4">
-                    <div class="flex items-end justify-end relative">
-                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}" alt="comment">
-                    </div>
-                    <div class="grid grid-cols-10">
-                        <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                src="{{ asset('images/avatar3.png') }}" alt=""></div>
-                        <div class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
-                            <p class="">It is a long established fact that a reader will be
-                                distracted by the readable
-                                content of a page when looking at its layout.</p>
-                            <p class="m-0 font-bold text-lg">Lora Smith</p>
-                        </div>
-                    </div>
-                </li>
-            </div>
-        </ul> --}}
-
-
         <div class="relative">
             <div class="carousel">
                 <div class="carousel-inner">
@@ -466,10 +480,10 @@
                         </ul>
                     </div>
                 </div>
-            </div>   
+            </div>
             <div class="pt-8 md:pt-12">
-            <div class="carousel-dots "></div>
-        </div>
+                <div class="carousel-dots "></div>
+            </div>
         </div>
 
         <style>

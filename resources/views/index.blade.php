@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>Laravel</title>
+    <title>WIST</title>
     {{-- fonts --}}
     {{-- Inter font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,7 +127,7 @@
 
     {{-- Pricing --}}
     <section id="pricing" class="mx-[2rem] md:mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 md:h-[85vh]">
+        <div class="grid grid-cols-1 md:grid-cols-3">
 
             <div class="p-8 mx-auto rounded-md shadow mb-40">
                 <p class="mb-3 text-[1.5rem] font-bold uppercase">Free</p>
@@ -370,30 +370,49 @@
     </section>
 
     {{-- Subscribe --}}
-    <section id="subscribe" class="mx-[2rem]">
-        <h1 class="font-bold text-5xl mb-3">Try using our templates!</h1>
-        <h3 class="text-md w-[80%] my-4">
-            Let's embody your beautiful ideas together, simplify the way you visualize your next big things.
-        </h3>
-        <div class="relative mb-10">
-            <input class="w-full rounded-md bg-[#F6F6F6] h-[50px] p-4" placeholder="Email" type="email">
-            <button
-                class="absolute w-[30%] right-0 top-0 rounded-r-none rounded-tr-lg rounded-br-lg h-[50px] border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] p-2 transition duration-300 ">Subscribe</button>
+    <section id="subscribe" class="mx-[2rem] my-5">
 
-            <img class="w-full rounded-md my-5" src="{{ asset('images/main-image1.png') }}" alt="">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="col-span-2 flex items-center justify-center pt-8">
+                <div class="md:w-[50%]">
+                    <div class="md:w-[90%]">
+                        <h1 class="font-bold text-5xl mb-3">Try using our templates!</h1>
+                        <h3 class="text-md my-4">
+                            Let's embody your beautiful ideas together, simplify the way you visualize your next big
+                            things.
+                        </h3>
+                    </div>
+                    <div class="relative mb-10">
+                        <input class="w-full rounded-md bg-[#F6F6F6] h-[50px] py-4" placeholder="Email"
+                            type="email">
+                        <button
+                            class="absolute w-[30%] right-0 top-0 rounded-r-none rounded-tr-lg rounded-br-lg h-[50px] border border-white text-white bg-[#3A4F39] hover:bg-white hover:text-[#3A4F39] hover:border-[#3A4F39] p-2 transition duration-300 ">Subscribe</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="">
+                <img class="w-full h-full rounded-md my-5 md:m-0" src="{{ asset('images/main-image1.png') }}"
+                    alt="">
+            </div>
         </div>
+        </div>
+
     </section>
 
     {{-- try us --}}
-    <section id="try" class="w-[100vw] py-10 m-0 bg-[#3A4F39] ">
-        <div class="mx-[8%]">
-            <h1 class="font-bold text-white text-5xl mb-3">Try using our templates!</h1>
-            <h3 class="text-md text-white w-[80%]">
-                Let's embody your beautiful ideas together, simplify the way you visualize your next big things.
-            </h3>
-            <div class="mt-4 flex justify-end">
-                <a class="text-[#F8D254] underline  mr-3" href="#">Learn More</a>
-                <img src="{{ asset('images/arrow.svg') }}" alt="arrow">
+    <section id="try" class="w-[100vw] py-10 m-0 bg-[#3A4F39] md:py-20">
+        <div class="mx-[8%] md:mx-[3rem] md:flex md:justify-between">
+            <div class="md:w-[30%]">
+                <h1 class="font-bold text-white text-5xl mb-3 md:mb-6">Try using our templates!</h1>
+                <h3 class="text-md text-white w-[80%]">
+                    Let's embody your beautiful ideas together, simplify the way you visualize your next big things.
+                </h3>
+            </div>
+
+            <div class="mt-4 flex justify-end md:pe-3 md:items-end">
+                <a class="text-[#F8D254] underline inline-block mr-3" href="#">Learn More</a>
+                <img class="md:h-6 md:w-6" src="{{ asset('images/arrow.svg') }}" alt="arrow">
             </div>
         </div>
     </section>

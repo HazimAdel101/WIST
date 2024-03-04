@@ -10,11 +10,13 @@
     {{-- Inter font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+    rel="stylesheet">
 
+
+    {{-- JS --}}
+    <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
-        rel="stylesheet">
 
     <style>
         body {
@@ -34,7 +36,7 @@
     <nav class='border-b'>
 
         <div class='flex flex-wrap items-center px-10 py-4 relative'>
-            <a href='#' class='hidden max-lg:block'><img src="{{ asset('images/logo.svg') }}" alt="logo"
+            <a href='#' class='hidden max-lg:block'><img src="{{ asset('assets/images/logo.svg') }}" alt="logo"
                     class='w-18' /></a>
             <div class='flex ml-auto lg:order-1 lg:hidden'>
                 <button id="toggle" class='ml-7'>
@@ -49,7 +51,7 @@
                 <ul class='lg:flex lg:space-x-8 max-lg:space-y-2'>
                     <li class='max-lg:border-b max-lg:py-2'>
                         <a href='#' class='hover:text-[#3A4F39] font-semiboldblock text-[15px]'>
-                            <img class="mr-2 inline-block w-5" src="{{ asset('images/menu.svg') }}" alt="">
+                            <img class="mr-2 inline-block w-5" src="{{ asset('assets/images/menu.svg') }}" alt="">
                             <span>Menu</span>
                         </a>
                     </li>
@@ -58,7 +60,7 @@
 
                 </ul>
                 <a href='#' class='m-auto absolute lg:left-2/4 lg:-translate-x-1/2 max-lg:hidden'><img
-                        src="{{ asset('images/logo.svg') }}" alt="logo" class='w-16' /></a>
+                        src="{{ asset('assets/images/logo.svg') }}" alt="logo" class='w-16' /></a>
                 <ul class='lg:flex lg:space-x-2 max-lg:space-y-2 ml-auto'>
                     <li class='max-lg:border-b max-lg:py-2'>
                         <a href='#' class='hover:text-[#3A4F39] block text-[15px]'>
@@ -79,27 +81,12 @@
         </div>
     </nav>
 
-    <script>
-        var toggleBtn = document.getElementById('toggle');
-        var collapseMenu = document.getElementById('collapseMenu');
-
-        function handleClick() {
-            if (collapseMenu.style.display === 'block') {
-                collapseMenu.style.display = 'none';
-            } else {
-                collapseMenu.style.display = 'block';
-            }
-        }
-
-        toggleBtn.addEventListener('click', handleClick);
-    </script>
-
     {{-- Main --}}
     <section id="main" class="">
         <div class="grid grid-cols-1 md:grid-cols-4 md:h-[85vh]">
             <div class="p-4 md:p-0">
                 <div class="mx-auto mt-[4rem] h-full md:m-0  md:my-0 md:pd-0 mb-8">
-                    <img class="w-full h-full mx-auto" src="{{ asset('images/main-image.png') }}" alt="main image">
+                    <img class="w-full h-full mx-auto" src="{{ asset('assets/images/main-image.png') }}" alt="main image">
                 </div>
             </div>
             <div class="col-span-2 py-20">
@@ -121,7 +108,7 @@
             </div>
             <div class="p-4 md:p-0 text-center">
                 <div class="w-[88%] mx-auto block mt-6 mb-[134px] md:m-0">
-                    <img class="w-full mx-auto" src="{{ asset('images/main-image1.png') }}" alt="main image 2">
+                    <img class="w-full mx-auto" src="{{ asset('assets/images/main-image1.png') }}" alt="main image 2">
                 </div>
             </div>
         </div>
@@ -140,20 +127,20 @@
                 <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
                 <ul>
                     <li class="mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/true.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
                     </li>
                     <li class="opacity-50 mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/false.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">Figma responsive
                             components</h3>
                     </li>
                     <li class="opacity-50 mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/false.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
                     </li>
                     <li class="opacity-50 mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/false.svg') }}" alt="false">
                         <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
                     </li>
                 </ul>
@@ -166,7 +153,7 @@
             <div class="p-8 my-3 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid md:mb-40  md:me-[2rem]">
                 <div class="flex justify-between items-start">
                     <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
-                    <img class="h-7 w-7" src="{{ asset('images/true.svg') }}" alt="">
+                    <img class="h-7 w-7" src="{{ asset('assets/images/true.svg') }}" alt="">
                 </div>
 
                 <span class="flex items-center mb-3 text-[1rem]"><span
@@ -175,20 +162,20 @@
                 <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
                 <ul>
                     <li class="mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/true.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
                     </li>
                     <li class="mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/true.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">Figma responsive
                             components</h3>
                     </li>
                     <li class="opacity-50 mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="false">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/false.svg') }}" alt="false">
                         <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
                     </li>
                     <li class="opacity-50 mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/false.svg') }}" alt="false">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/false.svg') }}" alt="false">
                         <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
                     </li>
                 </ul>
@@ -207,20 +194,20 @@
                 <p class="my-4 text-sm">It is a long established fact that a reader will be distracted.</p>
                 <ul>
                     <li class="mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/true.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">PNG templates</h3>
                     </li>
                     <li class="mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/true.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">Figma responsive
                             components</h3>
                     </li>
                     <li class=" mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/true.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">Constant updates</h3>
                     </li>
                     <li class="mb-5">
-                        <img class="inline mr-[.25rem]" src="{{ asset('images/true.svg') }}" alt="true">
+                        <img class="inline mr-[.25rem]" src="{{ asset('assets/images/true.svg') }}" alt="true">
                         <h3 class="inline-block text-[1.25rem]">Custom templates</h3>
                     </li>
                 </ul>
@@ -242,13 +229,13 @@
                             <div class="grid grid-cols-1 md:grid-cols-3">
                                 <li class="opacity-30 mb-4">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
 
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar1.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar1.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -261,12 +248,12 @@
 
                                 <li class="mb-4">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar2.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar2.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -279,12 +266,12 @@
 
                                 <li class="mb-4">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar3.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar3.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -302,13 +289,13 @@
                             <div class="grid grid-cols-1 md:grid-cols-3">
                                 <li class="opacity-30 mb-4">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
 
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar2.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar2.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -321,12 +308,12 @@
 
                                 <li class="mb-4">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar1.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar1.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -339,12 +326,12 @@
 
                                 <li class="mb-4 opacity-30">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar3.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar3.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -362,13 +349,13 @@
                             <div class="grid grid-cols-1 md:grid-cols-3">
                                 <li class="opacity-30 mb-4">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
 
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar3.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar3.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -381,12 +368,12 @@
 
                                 <li class="mb-4">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar2.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar2.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -399,12 +386,12 @@
 
                                 <li class="mb-4 opacity-30">
                                     <div class="flex items-end justify-end relative">
-                                        <img class="absolute top-0 right-0" src="{{ asset('images/comment.svg') }}"
+                                        <img class="absolute top-0 right-0" src="{{ asset('assets/images/comment.svg') }}"
                                             alt="comment">
                                     </div>
                                     <div class="grid grid-cols-10">
                                         <div class="col-span-2 p-4 my-auto -translate-x-3"><img
-                                                src="{{ asset('images/avatar1.png') }}" alt=""></div>
+                                                src="{{ asset('assets/images/avatar1.png') }}" alt=""></div>
                                         <div
                                             class="col-span-8 bg-[#F6F6F6] w-full py-[1rem] px-[1.5rem] text-md rounded-sm mt-12">
                                             <p class="">It is a long established fact that a reader will be
@@ -526,7 +513,7 @@
 
             </div>
             <div class="">
-                <img class="w-full h-full rounded-md pb-5 md:m-0" src="{{ asset('images/main-image1.png') }}"
+                <img class="w-full h-full rounded-md pb-5 md:m-0" src="{{ asset('assets/images/main-image1.png') }}"
                     alt="">
             </div>
         </div>
@@ -544,7 +531,7 @@
 
             <div class="mt-4 flex justify-end md:pe-3 md:items-end">
                 <a class="text-[#F8D254] underline inline-block mr-3" href="#">Learn More</a>
-                <img class="md:h-6 md:w-6" src="{{ asset('images/arrow.svg') }}" alt="arrow">
+                <img class="md:h-6 md:w-6" src="{{ asset('assets/images/arrow.svg') }}" alt="arrow">
             </div>
         </div>
     </section>
@@ -567,7 +554,7 @@
                     </div>
 
                     <div class="col-span-3 my-4">
-                        <img class="w-full object-cover h-[4rem] mt-3" src="{{ asset('images/main-image1.png') }}"
+                        <img class="w-full object-cover h-[4rem] mt-3" src="{{ asset('assets/images/main-image1.png') }}"
                             alt="">
                     </div>
                     <div class="col-span-1  flex justify-end me-2">
@@ -590,7 +577,7 @@
                         <h1 class="font-bold text-lg">I/№16</h1>
                     </div>
                     <div class="row-span-2 col-span-5">
-                        <img class="w-full h-full object-cover " src="{{ asset('images/main-image1.png') }}"
+                        <img class="w-full h-full object-cover " src="{{ asset('assets/images/main-image1.png') }}"
                             alt="">
                     </div>
                     <div class="col-span-5 flex justify-center items-end">
@@ -616,7 +603,7 @@
             </div>
         </div>
 
-        <img src="{{ asset('images/avatars.png') }}" alt=""
+        <img src="{{ asset('assets/images/avatars.png') }}" alt=""
             class="mx-0 h-[300px] md:h-full object-cover  md:bg-cover w-full my-5">
     </section>
 
@@ -635,10 +622,10 @@
             <div class="bg-[#EFF6F3] p-8 md:px-10 md:py-28">
                 <h1 class="text-center font-bold text-md mt-5 mb-10">Socialize with social</h1>
                 <div class="flex items-start justify-center mb-5 md:mb-0">
-                    <img class="mx-3" src="{{ asset('images/instagram.svg') }}" alt="">
-                    <img class="mx-3" src="{{ asset('images/facebook.svg') }}" alt="">
-                    <img class="mx-3" src="{{ asset('images/twitter.svg') }}" alt="">
-                    <img class="mx-3" src="{{ asset('images/be.svg') }}" alt="">
+                    <img class="mx-3" src="{{ asset('assets/images/instagram.svg') }}" alt="">
+                    <img class="mx-3" src="{{ asset('assets/images/facebook.svg') }}" alt="">
+                    <img class="mx-3" src="{{ asset('assets/images/twitter.svg') }}" alt="">
+                    <img class="mx-3" src="{{ asset('assets/images/be.svg') }}" alt="">
                 </div>
             </div>
         </div>

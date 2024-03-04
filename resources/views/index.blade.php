@@ -18,17 +18,8 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .shadow {
-            -webkit-box-shadow: 0px 2px 12px -1px rgba(0, 0, 0, 0.3);
-            -moz-box-shadow: 0px 2px 12px -1px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 2px 12px -1px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+    {{-- CSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 </head>
 
 <body class="text-[#2D2E2E] overflow-x-hidden">
@@ -150,7 +141,7 @@
 
             </div>
 
-            <div class="p-8 my-3 mx-auto rounded-md border-4 border-[#3A4F39] boreder-solid md:mb-40  md:me-[2rem]">
+            <div class="p-8 my-3 mx-auto rounded-md border-2 border-[#3A4F39] boreder-solid md:mb-40  md:me-[2rem]">
                 <div class="flex justify-between items-start">
                     <p class="mb-3 text-[1.5rem] font-bold uppercase">Premium</p>
                     <img class="h-7 w-7" src="{{ asset('assets/images/true.svg') }}" alt="">
@@ -411,82 +402,6 @@
             </div>
         </div>
 
-        <style>
-            .carousel {
-                overflow: hidden;
-            }
-
-            .carousel-inner {
-                display: flex;
-                transition: transform 0.3s ease;
-            }
-
-            .carousel-item {
-                flex: 0 0 100%;
-            }
-
-            .carousel-dots {
-                position: absolute;
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-                display: flex;
-            }
-
-            .carousel-dot {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: #333;
-                margin: 0 5px;
-                cursor: pointer;
-            }
-
-            .carousel-dot.active {
-                background-color: #666;
-            }
-        </style>
-
-        <script>
-            const items = document.querySelectorAll('.carousel-item');
-            const dots = document.querySelector('.carousel-dots');
-
-            items.forEach((item, index) => {
-                const dot = document.createElement('div');
-                dot.classList.add('carousel-dot');
-                if (index === 0) {
-                    dot.classList.add('active');
-                }
-                dot.addEventListener('click', () => {
-                    setActiveItem(index);
-                });
-                dots.appendChild(dot);
-            });
-
-            let activeIndex = 0;
-
-            function setActiveItem(index) {
-                items.forEach(item => {
-                    item.style.transform = `translateX(-${index * 100}%)`;
-                });
-                const activeDot = document.querySelector('.carousel-dot.active');
-                activeDot.classList.remove('active');
-                dots.children[index].classList.add('active');
-                activeIndex = index;
-            }
-
-            function nextItem() {
-                activeIndex = (activeIndex + 1) % items.length;
-                setActiveItem(activeIndex);
-            }
-
-            function prevItem() {
-                activeIndex = (activeIndex - 1 + items.length) % items.length;
-                setActiveItem(activeIndex);
-            }
-
-            setInterval(nextItem, 3000); // Auto slide every 3 seconds
-        </script>
 
     </section>
 
